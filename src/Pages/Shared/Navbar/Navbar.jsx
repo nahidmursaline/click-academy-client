@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Providers/AuthProvider';
 // import logo from '../../../assets/clickLogoo.png'
 
-// import {FaShoppingCart} from 'react-icons/fa';
+import {FaShoppingCart} from 'react-icons/fa';
 // import useCart from '../../../Hooks/useCart';
 
 const Navbar = () => {
@@ -24,13 +24,15 @@ const Navbar = () => {
      <li><Link to='/classes'>Classes</Link></li>
      <li><Link to='/order/salad'>Order Food</Link></li>
      <li><Link to='/secret'>Secret</Link></li>
-     {/* <li><Link to='/dashboard/mycart'>
-    
+    <li>
+      <Link to='/'>
+     
 <button className="btn">
-<FaShoppingCart></FaShoppingCart>
-  <div className="badge badge-secondary">+{cart?.length || 0}</div>
+  <FaShoppingCart></FaShoppingCart>
+  <div className="badge badge-secondary">+0</div>
 </button>
-      </Link></li> */}
+      </Link>
+    </li>
      
       
       {
