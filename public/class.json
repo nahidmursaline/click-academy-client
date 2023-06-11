@@ -1,0 +1,93 @@
+[
+   
+    {
+        "_id": "1",
+        "name": "Wildlife Photography",
+        "instructor": "Nahid Mursaline",
+        "description": "It's fantastic photography",
+        "image": "https://i.ibb.co/3fJZyNF/wildlife2.jpg",
+        "category": "wildlife",
+        "seats": "15",
+        "price": 12.9
+    },
+    {
+        "_id": "2",
+        "name": "Documentary Photography",
+        "instructor": "Plabon khan",
+        "description": "It's fantastic photography",
+        "image": "https://i.ibb.co/KGXbTtH/documentary.jpg",
+        "category": "popular",
+        "seats": "30",
+        "price": 12.5
+    },
+    {
+        "_id": "3",
+        "name": "Street Photography",
+        "instructor": "Prottoy Ahmed",
+        "description": "It's fantastic photography",
+        "image": "https://i.ibb.co/gzTCPYL/street.jpg",
+        "category": "popular",
+        "seats": "32",
+        "price": 12.5
+    },
+    {
+        "_id": "4",
+        "name": "Landscape Photography",
+        "instructor": "Istiak Ahmed",
+        "description": "It's fantastic photography",
+        "image": "https://i.ibb.co/gwmGckX/landscape.jpg",
+        "category": "popular",
+        "seats": "40",
+        "price": 12.9
+    },
+    {
+        "_id": "5",
+        "name": "Fashion Photography",
+        "instructor": "Shajib Ahmed",
+        "description": "It's fantastic photography",
+        "image": "https://i.ibb.co/7XzJtJ0/fashion.jpg",
+        "category": "fashion",
+        "seats": "35",
+        "price": 14.5
+    },
+    {
+        "_id": "6",
+        "name": "Portrait Photography",
+        "instructor": "Shovon Mahmud",
+        "description": "It's fantastic photography",
+        "image": "https://i.ibb.co/2Z8mjwN/portrait.jpg",
+        "category": "popular",
+        "seats": "25",
+        "price": 9.5
+    },
+    {
+        "_id": "7",
+        "name": "Wildlife Photography",
+        "instructor": "Nahid Mursaline",
+        "description": "It's fantastic photography",
+        "image": "https://i.ibb.co/w42HS85/wildlife3.jpg",
+        "category": "popular",
+        "seats": "11",
+        "price": 14.5
+    },
+    {
+        "_id": "8",
+        "name": "Landscape Photography",
+        "instructor": "Sowrov Mahmud",
+        "description": "It's fantastic photography",
+        "image": "https://i.ibb.co/2k8cT04/landscape2.jpg",
+        "category": "popular",
+        "seats": "30",
+        "price": 10.5
+    },
+    {
+        "_id": "9",
+        "name": "Wildlife Photography",
+        "instructor": "Tanisha Mahmud",
+        "description": "It's fantastic photography",
+        "image": "https://i.ibb.co/Qd4zp6v/wildlife.jpg",
+        "category": "wildlife",
+        "seats": "30",
+        "price": 10.5
+    }
+]
