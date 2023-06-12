@@ -22,17 +22,9 @@ const Navbar = () => {
      
      <li><Link to='/'>Home</Link></li>
      <li><Link to='/classes'>Classes</Link></li>
-     <li><Link to='/order/salad'>Order Food</Link></li>
+     <li><Link to='/dashboard/myclass'>Dashboard</Link></li>
      <li><Link to='/secret'>Secret</Link></li>
-    <li>
-      <Link to='/'>
-     
-<button className="btn">
-  <FaShoppingCart></FaShoppingCart>
-  <div className="badge badge-secondary">+0</div>
-</button>
-      </Link>
-    </li>
+   
      
       
       {
