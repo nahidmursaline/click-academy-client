@@ -18,24 +18,40 @@ const SignUp = () => {
 
   const onSubmit = (data) => {
     console.log(data);
+
     createUser(data.email, data.password)
     .then(result => {
       const loggedUser = result.user;
       console.log(loggedUser)
       updateUserProfile(data.name, data.photo)
+      
       .then(()=> {
+        const saveUser = {name: data.name, email: data.email, photo: data.photo}
+        fetch('http://localhost:5000/users', {
+          method: 'POST', 
+          headers: {
+            'content-type': 'application/json'
+          },
+          body: JSON.stringify(saveUser)
+        })
+        .then(res => res.json())
+        .then(data => {
+          if(data.insertedId){
+            reset();
+            Swal.fire({
+              title: 'SignUp Successful',
+              showClass: {
+                popup: 'animate__animated animate__fadeInDown',
+              },
+              hideClass: {
+                popup: 'animate__animated animate__fadeOutUp',
+              },
+            });
+            navigate('/')
+          }
+        })
         console.log('user profile updated');
-        reset();
-        Swal.fire({
-          title: 'SignUp Successful',
-          showClass: {
-            popup: 'animate__animated animate__fadeInDown',
-          },
-          hideClass: {
-            popup: 'animate__animated animate__fadeOutUp',
-          },
-        });
-        navigate('/')
+       
       })
       .catch(error => console.log(error))
     })
