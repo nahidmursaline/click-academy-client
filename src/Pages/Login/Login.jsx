@@ -1,8 +1,11 @@
 import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
+import { FaGoogle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../Providers/AuthProvider';
+import SocialLogin from '../SocialLogin/SocialLogin';
+
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
@@ -10,6 +13,8 @@ const Login = () => {
   const location = useLocation();
 
   const from = location.state?.from?.pathname || '/';
+
+  
 
   const {
     register,
@@ -88,7 +93,8 @@ const Login = () => {
                   value="Login"
                 ></input>
                 <br />
-                <button className="btn btn-error">Google Login</button>
+                <SocialLogin></SocialLogin>
+              
               </div>
 
               <p className="text-center my-4">
@@ -98,6 +104,7 @@ const Login = () => {
                 </Link>
               </p>
             </form>
+           
           </div>
         </div>
       </div>
