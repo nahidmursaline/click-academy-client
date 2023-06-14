@@ -9,6 +9,7 @@ import Payment from "../Pages/Dashboard/Payment/Payment";
 import Home from "../Pages/Home/Home/Home";
 import Instructor from "../Pages/Home/Instructor/Instructor";
 import Login from "../Pages/Login/Login";
+import NotFound from "../Pages/NotFound/NotFound";
 import Secret from "../Pages/Shared/Secret";
 import SignUp from "../Pages/SignUp/SignUp";
 import AdminRoute from "./AdminRoute";
@@ -65,5 +66,9 @@ export const router = createBrowserRouter([
           element: <Payment></Payment>
         }
       ]
+    },
+    {
+      path: '/*',
+      element: <NotFound></NotFound>
     }
   ]);
