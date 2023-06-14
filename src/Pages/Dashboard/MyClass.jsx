@@ -6,6 +6,7 @@ import useCart from '../../Hooks/useCart';
 
 const MyClass = () => {
     const [cart, refetch] = useCart()
+    const total = cart.reduce((sum, item) => item.price + sum, 0)
 
 const handleDelete = item => {
     Swal.fire({
@@ -40,7 +41,11 @@ const handleDelete = item => {
 
     return (
         <div className='w-full'>
-            <h2>My Class{cart.length}</h2>
+            <div className='flex justify-between ... p-6 '>
+            <h2>My Class: {cart.length}</h2>
+            <h2>total Price: ${total}</h2>
+            <Link to='/dashboard/payment'> <button className="text-white btn btn-ghost bg-orange-400 btn-sm mr-6">Pay</button></Link>
+            </div>
             <div className="overflow-x-auto">
   <table className="table">
     {/* head */}
@@ -82,7 +87,7 @@ const handleDelete = item => {
               <button onClick={()=>handleDelete(item)} className=" text-white btn btn-ghost bg-red-400 btn-md"><FaTrashAlt></FaTrashAlt></button>
             </td>
             <td>
-             <Link to='/dashboard/payment'> <button className="text-white btn btn-ghost bg-orange-400 btn-md">Pay</button></Link>
+             <Link to='/dashboard/payment'> <button className="text-white btn btn-ghost bg-orange-400 btn-sm">Pay</button></Link>
             </td>
           </tr>)
       }
