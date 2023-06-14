@@ -1,22 +1,35 @@
+import axios from 'axios';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import Swal from 'sweetalert2';
 import useAuth from '../../Hooks/useAuth';
 
 const AddClass = () => {
-//     const { register, handleSubmit, formState: { errors } } = useForm();
-//     const {user} = useAuth()
-//   const onSubmit = data => {
-//     const name = instructorName.current.value;
-//     const email = instructorEmail.current.value;
-
-//     const classData = {...data, name, email}
-    
-//     console.log(classData)};
-//   console.log(errors);
+    const { register, handleSubmit, formState: { errors } } = useForm();
+    const {user} = useAuth()
+  const onSubmit = data => {
+      axios.post('http://localhost:5000/classes',{
+        data,
+      })
+      .then((res) => {
+        console.log(res.data)
+        if(res.data.insertedId){
+          Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Class Added successfully',
+            showConfirmButton: false,
+            timer: 1500
+          })
+        }
+      })
+      .catch((error) => console.log(error))
+    };
+ 
 
     return (
         <div className='w-full px-10 '>
-           {/* <form onSubmit={handleSubmit(onSubmit)}>
+           <form onSubmit={handleSubmit(onSubmit)}>
            <div className="form-control w-full ">
   <label className="label">
     <span className="label-text font-semibold">Class Name</span>
@@ -25,22 +38,25 @@ const AddClass = () => {
   <input type="text" placeholder="Class Name" {...register("name", {required: true, maxLength: 80})} className="input input-bordered w-full " />
   
 </div>
-           <div className="form-control w-full ">
+
+<div className="form-control w-full ">
   <label className="label">
-    <span className="label-text font-semibold">Instructor</span>
+    <span className="label-text font-semibold">Instructor Name</span>
    
   </label>
-  <input   value={user?.displayName} className="input input-bordered w-full " readOnly ref={instructorName}/>
+  <input type="text" placeholder="Instructor Name" defaultValue={user?.displayName} {...register("instructor", { required: true })} className="input input-bordered w-full " />
   
 </div>
-           <div className="form-control w-full ">
+
+<div className="form-control w-full ">
   <label className="label">
     <span className="label-text font-semibold">Instructor Email</span>
    
   </label>
-  <input   value={user?.email} className="input input-bordered w-full " readOnly ref={instructorEmail}/>
+  <input type="email" placeholder="Instructor Email" defaultValue={user?.email} {...register("email", { required: true })} className="input input-bordered w-full " />
   
 </div>
+          
            <div className="form-control w-full ">
   <label className="label">
     <span className="label-text font-semibold">Category</span>
@@ -74,7 +90,7 @@ const AddClass = () => {
   
 </div>
           <input className='btn btn-error btn-sm mt-4' type="submit" value="Add Class"/>
-           </form> */}
+           </form>
         </div>
     );
 };

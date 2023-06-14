@@ -7,6 +7,7 @@ import ManageUsers from "../Pages/Dashboard/ManageUsers/ManageUsers";
 import MyClass from "../Pages/Dashboard/MyClass";
 import Payment from "../Pages/Dashboard/Payment/Payment";
 import Home from "../Pages/Home/Home/Home";
+import Instructor from "../Pages/Home/Instructor/Instructor";
 import Login from "../Pages/Login/Login";
 import Secret from "../Pages/Shared/Secret";
 import SignUp from "../Pages/SignUp/SignUp";
@@ -31,13 +32,14 @@ export const router = createBrowserRouter([
             path: 'signup',
             element: <SignUp></SignUp>
         }, 
-        {
-          path: 'secret',
-          element: <PrivateRoute><Secret></Secret></PrivateRoute>
-        },
+       
         {
           path: 'classes',
           element:<Classes></Classes>
+        },
+        {
+          path: 'instructors',
+          element: <Instructor></Instructor>
         }
       ]
    

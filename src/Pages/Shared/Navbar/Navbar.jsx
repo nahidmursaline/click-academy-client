@@ -22,15 +22,19 @@ const Navbar = () => {
      
      <li><Link to='/'>Home</Link></li>
      <li><Link to='/classes'>Classes</Link></li>
-     <li><Link to='/dashboard/myclass'>Dashboard</Link></li>
-     <li><Link to='/secret'>Secret</Link></li>
+     <li><Link to='/instructors'>Instructors</Link></li>
+     
+    
    
      
       
       {
         user ? <>
-       <span>{user?.displayName}</span>
-<button onClick={handleLogOut} class="btn btn-outline btn-error">Log Out</button>
+        <li><Link to='/dashboard/myclass'>Dashboard</Link></li>
+       <span className='mt-2'>{user?.displayName}</span>
+      
+<button onClick={handleLogOut} class="btn btn-outline btn-sm btn-error ml-3 mt-1">Log Out</button>
+<img className='rounded-full ml-3 mt-1' title= {user.displayName}style={{"height" : "38px" , "width": "38px"}} src={user.photoURL} alt="" />
         </> : <>
         <li><Link to='/login'>Login</Link></li>
         </>
@@ -57,9 +61,7 @@ const Navbar = () => {
      {navOptions}
     </ul>
   </div>
-  <div className="navbar-end">
-    <a className="btn">Get started</a>
-  </div>
+  
 </div>  
         </>
     );
