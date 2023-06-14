@@ -1,13 +1,18 @@
 import React from 'react';
 import { FaCalendarAlt, FaHome, FaShoppingCart, FaUsers, FaWallet } from 'react-icons/fa';
 import { Link, Outlet } from 'react-router-dom';
+import useAdmin from '../Hooks/useAdmin';
 import useCart from '../Hooks/useCart';
+import useInstructor from '../Hooks/useInstructor';
 
 const Dashboard = () => {
   const [cart] = useCart()
 
-  const isAdmin = true;
-  const isInstructor = true; 
+  // const isAdmin = true;
+  // const isInstructor = true; 
+
+  const [isAdmin] = useAdmin()
+  const [isInstructor] = useInstructor()
     return (
         <div className="drawer lg:drawer-open">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -27,7 +32,7 @@ const Dashboard = () => {
             
               </> : isInstructor? <>
               <li><Link><FaHome></FaHome>Instructor Home</Link></li>
-            <li><Link><FaCalendarAlt></FaCalendarAlt>Add a Class</Link></li>
+            <li><Link to='/dashboard/addClass'><FaCalendarAlt></FaCalendarAlt>Add a Class</Link></li>
             <li><Link><FaWallet></FaWallet>My Classes</Link></li>
             <li><Link to='/dashboard/myclass'><FaShoppingCart></FaShoppingCart>My Class
             <div className="badge badge-error">{cart.length}</div>

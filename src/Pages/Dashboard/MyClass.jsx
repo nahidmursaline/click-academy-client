@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaAmazonPay, FaPaypal, FaTrashAlt } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import useCart from '../../Hooks/useCart';
 
@@ -81,7 +82,7 @@ const handleDelete = item => {
               <button onClick={()=>handleDelete(item)} className=" text-white btn btn-ghost bg-red-400 btn-md"><FaTrashAlt></FaTrashAlt></button>
             </td>
             <td>
-              <button className="text-white btn btn-ghost bg-orange-400 btn-md">Pay</button>
+             <Link to='/dashboard/payment'> <button className="text-white btn btn-ghost bg-orange-400 btn-md">Pay</button></Link>
             </td>
           </tr>)
       }
