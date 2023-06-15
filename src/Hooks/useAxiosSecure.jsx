@@ -6,12 +6,12 @@ import { useContext } from 'react';
 import { AuthContext } from '../Providers/AuthProvider';
 
 const axiosSecure = axios.create({
-  baseURL: 'http://localhost:5000', 
+  baseURL: 'https://click-academy-server-nahidmursalinee-gmailcom.vercel.app',
 });
 
 const useAxiosSecure = () => {
-  const { logOut } = useContext(AuthContext); 
-  const navigate = useNavigate(); 
+  const { logOut } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   useEffect(() => {
     axiosSecure.interceptors.request.use((config) => {
@@ -25,7 +25,10 @@ const useAxiosSecure = () => {
     axiosSecure.interceptors.response.use(
       (response) => response,
       async (error) => {
-        if (error.response && (error.response.status === 401 || error.response.status === 403)) {
+        if (
+          error.response &&
+          (error.response.status === 401 || error.response.status === 403)
+        ) {
           await logOut();
           navigate('/login');
         }
