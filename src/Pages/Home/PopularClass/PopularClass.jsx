@@ -10,7 +10,7 @@ const PopularClass = () => {
 
     return (
         <div>
-            <h3>Popular Classes</h3>
+            <h3 className='text-center text-3xl m-6 pt-[70px]'>Popular Classes</h3>
            <div className='grid m
         lg:grid-cols-3  md:grid-cols-2 sm:grid-cols-1 gap-4'>
            {

@@ -27,7 +27,7 @@ const Dashboard = () => {
             {
               isAdmin? <>
                <li><Link><FaHome></FaHome>Admin Home</Link></li>
-            <li><Link><FaCalendarAlt></FaCalendarAlt>Manage Classes</Link></li>
+            <li><Link to='/dashboard/manageclasses'><FaCalendarAlt></FaCalendarAlt>Manage Classes</Link></li>
             <li><Link to='/dashboard/manageUsers'><FaUsers></FaUsers>Manage Users</Link></li>
             
               </> : isInstructor? <>

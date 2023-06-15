@@ -4,6 +4,7 @@ import Main from "../Layout/Main";
 import Classes from "../Pages/Classes/Classes";
 import AddClass from "../Pages/Dashboard/AddClass";
 import InstructorClass from "../Pages/Dashboard/InstructorClass/InstructorClass";
+import ManageClasses from "../Pages/Dashboard/ManageClasses/ManageClasses";
 import ManageUsers from "../Pages/Dashboard/ManageUsers/ManageUsers";
 import MyClass from "../Pages/Dashboard/MyClass";
 
@@ -70,6 +71,10 @@ export const router = createBrowserRouter([
         {
           path: 'mycartclass', 
           element: <MyClass></MyClass>
+        },
+        {
+          path: 'manageclasses',
+          element: <ManageClasses></ManageClasses>
         }
       ]
     },
