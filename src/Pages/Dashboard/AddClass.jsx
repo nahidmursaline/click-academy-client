@@ -8,7 +8,7 @@ const AddClass = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const {user} = useAuth()
   const onSubmit = data => {
-      axios.post('http://localhost:5000/classes',{
+      axios.post('http://localhost:5000/myclass',{
         data,
       })
       .then((res) => {

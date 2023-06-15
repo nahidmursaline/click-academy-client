@@ -3,8 +3,10 @@ import Dashboard from "../Layout/Dashboard";
 import Main from "../Layout/Main";
 import Classes from "../Pages/Classes/Classes";
 import AddClass from "../Pages/Dashboard/AddClass";
+import InstructorClass from "../Pages/Dashboard/InstructorClass/InstructorClass";
 import ManageUsers from "../Pages/Dashboard/ManageUsers/ManageUsers";
 import MyClass from "../Pages/Dashboard/MyClass";
+
 import Payment from "../Pages/Dashboard/Payment/Payment";
 import Home from "../Pages/Home/Home/Home";
 import Instructor from "../Pages/Home/Instructor/Instructor";
@@ -51,7 +53,7 @@ export const router = createBrowserRouter([
       children: [
         {
           path: 'myclass',
-          element: <MyClass></MyClass>
+          element: <InstructorClass></InstructorClass>
         },
         {
           path: 'manageUsers',
@@ -64,6 +66,10 @@ export const router = createBrowserRouter([
         {
           path: 'payment',
           element: <Payment></Payment>
+        },
+        {
+          path: 'mycartclass', 
+          element: <MyClass></MyClass>
         }
       ]
     },

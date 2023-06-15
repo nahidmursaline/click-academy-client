@@ -4,6 +4,7 @@ import { AuthContext } from '../../../Providers/AuthProvider';
 // import logo from '../../../assets/clickLogoo.png'
 
 import {FaShoppingCart} from 'react-icons/fa';
+import DarkMode from '../../Home/DarkMode/DarkMode';
 // import useCart from '../../../Hooks/useCart';
 
 const Navbar = () => {
@@ -19,7 +20,7 @@ const Navbar = () => {
 
 
     const navOptions = <>
-     
+     <DarkMode></DarkMode>
      <li><Link to='/'>Home</Link></li>
      <li><Link to='/classes'>Classes</Link></li>
      <li><Link to='/instructors'>Instructors</Link></li>
@@ -30,7 +31,7 @@ const Navbar = () => {
       
       {
         user ? <>
-        <li><Link to='/dashboard/myclass'>Dashboard</Link></li>
+        <li><Link to='/dashboard'>Dashboard</Link></li>
        <span className='mt-2'>{user?.displayName}</span>
       
 <button onClick={handleLogOut} class="btn btn-outline btn-sm btn-error ml-3 mt-1">Log Out</button>

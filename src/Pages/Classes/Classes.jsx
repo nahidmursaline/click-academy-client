@@ -1,9 +1,13 @@
+import axios from 'axios';
 import React from 'react';
+import { useEffect } from 'react';
+import { useState } from 'react';
 import useClasses from '../../Hooks/useClasses';
 import PopularItem from '../Home/PopularClass/PopularItem';
 
 const Classes = () => {
     const [classes] = useClasses()
+    
     return (
         <div>
             <h3>All Classes</h3>

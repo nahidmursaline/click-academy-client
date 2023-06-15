@@ -8,6 +8,8 @@ import { AuthContext } from '../../../Providers/AuthProvider';
 const PopularItem = ({ item }) => {
 
   const { name, instructor, image, seats, price, _id } = item;
+  // const {data} = item
+  // console.log(item);
   const {user} = useContext(AuthContext);
   const [, refetch] = useCart()
   const navigate = useNavigate();

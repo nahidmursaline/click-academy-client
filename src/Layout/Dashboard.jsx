@@ -33,9 +33,9 @@ const Dashboard = () => {
               </> : isInstructor? <>
               <li><Link><FaHome></FaHome>Instructor Home</Link></li>
             <li><Link to='/dashboard/addClass'><FaCalendarAlt></FaCalendarAlt>Add a Class</Link></li>
-            <li><Link><FaWallet></FaWallet>My Classes</Link></li>
+            
             <li><Link to='/dashboard/myclass'><FaShoppingCart></FaShoppingCart>My Class
-            <div className="badge badge-error">{cart.length}</div>
+           
             </Link>
            
             </li>
@@ -43,7 +43,7 @@ const Dashboard = () => {
                 <li><Link><FaHome></FaHome>Student Home</Link></li>
             <li><Link><FaCalendarAlt></FaCalendarAlt>My Selected Classes</Link></li>
             <li><Link><FaWallet></FaWallet>My Enrolled Classes</Link></li>
-            <li><Link to='/dashboard/myclass'><FaShoppingCart></FaShoppingCart>My Class
+            <li><Link to='/dashboard/mycartclass'><FaShoppingCart></FaShoppingCart>My Class
             <div className="badge badge-error">{cart.length}</div>
             </Link>
            
@@ -56,8 +56,7 @@ const Dashboard = () => {
             <div className='divider'></div>
       
             <li><Link to='/'><FaHome></FaHome>Home</Link></li>
-            <li><Link to='/menu'>Our Menu</Link></li>
-           <li><Link to='/order/salad'>Order Food</Link></li>
+           
           </ul>
         
         </div>
