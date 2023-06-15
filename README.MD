@@ -7,5 +7,8 @@
 • Teacher can add class and see those classes
 • Admin can manage users
 • Admin can deny or approved classes
-• 
+• Students can buy classes over stripe method
 
+
+# Used Packages:
+• Here i am using many technologies like: html, css, javascript, react, nodejs, mongoDB, expressJs etc.
