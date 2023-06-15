@@ -18,12 +18,12 @@ const InstructorClasssItem = ({cls}) => {
         <p>Category: {data.category}</p>
         <p>Seats: {data.seats}</p>
         <p>Price: {data.price}</p>
-        <p>status: </p>
+        <p>status: approved</p>
         <div className="card-actions justify-end">
           <div>
-          <button className="btn btn-primary">Buy Now</button>
-          <button className="btn btn-primary">Buy Now</button>
-          <button className="btn btn-primary">Buy Now</button>
+          <button className="btn btn-error ">Enrolled Student</button>
+          <button className="btn btn-error ml-5">Feedback</button>
+          <button className="btn btn-error mt-2 ">Update</button>
           </div>
         </div>
       </div>
