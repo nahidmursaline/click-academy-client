@@ -10,7 +10,7 @@ const Classes = () => {
     
     return (
         <div>
-            <h3 className='pt-[70px] text-center text-3xl p-6' >All Classes</h3>
+            <h3 className='pt-[70px] text-center text-3xl p-6' >All Classes Here</h3>
            <div className='grid m
         lg:grid-cols-3  md:grid-cols-2 sm:grid-cols-1 gap-4'>
            {
